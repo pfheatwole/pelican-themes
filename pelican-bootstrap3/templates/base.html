@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% if 'liquid_tags.notebook' in PLUGINS %}
+    {% if 'ipynb.liquid' in PLUGINS %}
         {% include 'includes/liquid_tags_nb_header.html' %}
     {% endif %}
 
@@ -226,7 +226,7 @@
 {% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 
-{% if 'liquid_tags.notebook' in PLUGINS %}
+{% if 'ipynb.liquid' in PLUGINS %}
     {% include 'includes/liquid_tags_nb_footer.html' %}
 {% endif %}
 

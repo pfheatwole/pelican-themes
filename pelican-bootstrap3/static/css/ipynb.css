@@ -1,0 +1,74 @@
+/* Cells go to the edges of the container */
+div.cell {
+    padding: 0;
+}
+
+/* Remove the input_prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* Text cells hug the container boundaries */
+div.text_cell_render {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Don't override the site theme CSS */
+.rendered_html :link {
+    text-decoration: None;
+}
+.rendered_html :visited {
+    text-decoration: None;
+}
+
+/* Condense input prompts
+ *   -- FIXME: variable based on @media(max-width) or similar?
+ */
+div.prompt {
+    min-width:11ex;
+}
+
+/* Add whitespace */
+div.input {
+    margin-bottom: 1em;
+}
+div.output_wrapper {
+    margin-bottom: 1em;
+}
+
+/* Add a bit of whitespace around code */
+.input_area {padding: 0.2em;}
+
+/* Full-width images
+ *   -- FIXME: verify no unwanted side effects
+ */
+div.output_subarea {
+    max-width: 100%;
+}
+
+/* Add vertical padding around "Display"-type equations */
+.MathJax_Display {
+    margin: 1em 0;
+}
+
+/* FIXME: is this here just in case I mess up so I can see the content that overflowed? */
+div.entry-content {
+  overflow: visible;
+}
+
+/* Reduce the space reserved by anchor links to reduce unnecessary line wrapping */
+a.anchor-link:link {
+    padding:0px 0px 0px 10px;
+}
+
+/* Style table entries */
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}

@@ -10,10 +10,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% if 'ipynb.liquid' in PLUGINS %}
-        {% include 'includes/liquid_tags_nb_header.html' %}
-    {% endif %}
-
     {# Favicons are a touchy subject. For reasoning for the following code, see: http://stackoverflow.com/a/23851464/872397 #}
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
@@ -236,9 +232,8 @@
 {% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 
-{% if 'ipynb.liquid' in PLUGINS %}
-    {% include 'includes/liquid_tags_nb_footer.html' %}
-{% endif %}
+<!-- Override the default nbconvert CSS -->
+<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/ipynb.css" type="text/css"/>
 
 {% block scripts %}{% endblock %}
 </body>
